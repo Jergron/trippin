@@ -8,7 +8,34 @@
 </head>
 
 <body>
+  <div class="col-md-10" id="list-of-trips"></div>
 
+  <div class="container well" id="box">
+    <!-- Container for main and sidebar --> 
+    <div class=" container row">
+    <!-- Container for sidebar --> 
+      <div class="col-md-2">
+        <h2>Trippin</h2>
+        <label>Location Name</label>
+        <input type="text" class="form-control" id="locationName">
+       
+        <label>Location Type</label>
+        <select class="form-control" id="locationType">
+        </select>
+
+        <label>Review</label>
+        <textarea class="form-control" id="review">
+        </textarea>
+
+        <div  class="btn-group" role="group" aria-label="">
+          <button id="visited" type="button" class="btn btn-success" value="submit">Visited</button>
+          <button id="wishList" type="button" class="btn btn-success" value="submit">Wish List</button>
+          <button id="addLocation" type="button" class="btn btn-default" value="submit">Add</button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
   <script data-main="javascripts/main" src="./lib/bower_components/requirejs/require.js"></script>
 </body>
 </html>
