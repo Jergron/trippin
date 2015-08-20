@@ -11,9 +11,8 @@
   <div class="col-md-10" id="list-of-trips"></div>
 
   <div class="container well" id="box">
-    <!-- Container for main and sidebar --> 
+
     <div class=" container row">
-    <!-- Container for sidebar --> 
       <div class="col-md-2">
         <h2>Trippin</h2>
         <label>Location Name</label>
@@ -24,17 +23,22 @@
         </select>
 
         <label>Review</label>
-        <textarea class="form-control" id="review">
-        </textarea>
+        <textarea class="form-control" id="review"></textarea>
 
         <div  class="btn-group" role="group" aria-label="">
-          <button id="visited" type="button" class="btn btn-success" value="submit">Visited</button>
-          <button id="wishList" type="button" class="btn btn-success" value="submit">Wish List</button>
-          <button id="addLocation" type="button" class="btn btn-default" value="submit">Add</button>
+          <button id="visited" type="button" class="btn btn-info" value="submit">Visited</button>
+          <button id="wishList" type="button" class="btn btn-primary" value="submit">Wish List</button>
+        </div>
+        <div>
+          <button id="addLocation" type="button" class="btn btn-success" value="submit">Add</button>
         </div>
       
       </div>
     </div>
+  </div>
+  <div class="review-entry" role="group" class=" .btn-group btn-group-xs container">
+    <textarea></textarea>
+    <button class="btn btn-success" id="save-review" value="submit">Save</button>
   </div>
   <script data-main="javascripts/main" src="./lib/bower_components/requirejs/require.js"></script>
 </body>

@@ -1,8 +1,14 @@
 {{#each this}}
+<div class="dataSec" data-key="{{@key}}">
   <div>
-    {{location}}
+    <h3>{{location}}</h3>
   </div>
-    {{#each reviews}}
-      <span>{{title}}</span> | <span>{{date}}</span>
-    {{/each}}
+  {{#each reviews}}
+    <h4>{{title}} <small>{{date}}</small></h4>
+  {{/each}}
+</div>
+<div role="group" class=".btn-group btn-group-xs">
+  <button role="group" class=".btn-group btn-group-xs btn btn-danger del">Remove Trip</button>
+  <button class="btn btn-success" id="add-review#{{@key}}">Add Review</button> 
+</div>
 {{/each}}

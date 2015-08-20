@@ -14,8 +14,9 @@ define(function(require) {
   $("#addLocation").click(function() {
 
     var newLocation = {
-      location: $("locationName").val(),
-      location_type: $("locationType").val(),
+      location: $("#locationName").val(),
+      location_type: $("#locationType").val(),
+      reviews: $("#review").val(),
       visited: visited
     };
 
@@ -27,6 +28,7 @@ define(function(require) {
       data: JSON.stringify(newLocation)
     })
     .done(function(newData) {
+      location.reload();
       console.log(newData);
     })
     .fail(function(xhr, status, error) {
