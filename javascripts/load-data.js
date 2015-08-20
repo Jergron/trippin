@@ -10,7 +10,7 @@ define(function(require) {
     var location_types = snapshot.val();
     console.log("location_types", location_types);
     
-    // This will hold the complere DOM string of location types
+    // This will hold the complete DOM string of location types
     var populatedTemplate = getTemplates.locTypeTpl(location_types);
     
     // Insert the DOM string into the appropriate element
@@ -23,12 +23,28 @@ define(function(require) {
   var trips = snapshot.val();
     console.log("trips", trips);
     
-    // This will hold the complere DOM string of trips
+    // This will hold the complete DOM string of trips
     var populatedTemplate = getTemplates.tripTpl(trips);
     console.log(populatedTemplate);
 
     // Insert the DOM string into the appropriate element 
     $("#list-of-trips").html(populatedTemplate);
+    
+    // Filters the selected DOM strings of trips visited 
+    $(document).on("click", "#visitSite", function() {
+    
+      $(".dataSec").filter("div[id^='showTrip#true']").show();
+
+      $(".dataSec").filter("div[id^='showTrip#false']").hide();
+    });
+    
+    // Filters the selected DOM strings of trips not visited 
+    $(document).on("click", "#wishSite", function() {
+
+      $(".dataSec").filter("div[id^='showTrip#true']").hide();
+
+      $(".dataSec").filter("div[id^='showTrip#false']").show();
+    });
   });
   
 });
